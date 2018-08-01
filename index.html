@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset ="UTF-8">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<title>My First Page Ever</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navbar" aria-expanded="false">Open!
+        </button>
+        <a class="navbar-brand" href="index.html">Sampo Kuokkanen</a>
+    </div>
+    <div class="collapse navbar-collapse" id="main_navbar">
+    <ul class="nav navbar-nav">
+    <li class="active"><a href="index.html">
+	Home</a></li>
+	<li>
+    <a href="about.html">
+	About</a></li>
+	<li>
+    <a href="contact.html">
+	Contact</a></li>
+    <li>
+    <a href="photoalbums.html">Photo albums</a>
+    </li>
+   </ul>
+        <div class="navbar-form navbar-right">
+    <input id="namebox" type="text" class="form-control" placeholder="Name, please...">
+    </div>
+    </div>
+</nav>  
+    
+    
+    <section class="ConA">
+    <div class="container">
+    <img src="img/logo.svg" id="logo-svg" alt="">
+    <h1 id="logo" class="transparent">K.S.</h1>
+    <p>Living in Osaka, working in Kyoto</p>
+        <button class="btn-primary"><a href="#" class="blinker_me">Click here!</a></button><br>
+        <a href="photoalbums.html" class="clicky" id="clickyclick">PHOTO ALBUMS</a>
+        </div>
+    </section>
+    
+    <!-- start ConB -->
+    <section class="ConB">
+    <div class="container">
+        
+        <div class="text"><i class="fas fa-chart-bar icon"></i>
+           <h2>More in less time</h2>
+           <p>"No problem!" is my motto. </p>
+           <a href="#">MORE...<span class="fas fa-chevron-right"></span>
+           </a>
+        </div>
+        
+        <div class="text"><i class="fas fa-cogs icon"></i>
+        <h2>Philosophical thinking</h2>
+        <p>Studied philosophy at NTU.</p>
+        <a href="#">MORE...<span class="fas fa-chevron-right"></span>
+        </a>
+        </div>
+        
+        <div class="text">
+        <i class="fas fa-rocket icon"></i>
+        <h2>Ready for new challenges!</h2>
+        <p>Let's go!</p>
+        <a href="#">MORE...<span class="fas fa-chevron-right"></span>
+        </a>
+        </div>
+        
+    </div>
+    </section>
+    <!-- end ConB -->
+    
+    <!-- start ConC -->
+    <section class="ConC">
+    <div class="container">
+    <div class="photo"></div>
+    <div class="text">
+        <h2></h2>    
+        <p></p>
+    </div>
+    </section>
+        
+        
+	<div class="container">
+	<h1 class="hello" onclick="alert('ハロー');">
+		Hello!
+		</h1>
+
+		<h2 id="number" onclick="count();">
+		</h2>
+
+        <hi id="small_hello" onclick="sayHello()">Hello World</hi>
+	<hi id="small_hello2" onclick="sayHello2()">Hello World2</hi>
+
+	<div class="row">
+	<div class="col-md-3 col-xs-6 col-lg-6">
+		<img src="test1.jpg" class="crop" id="img1">
+	</div>
+	<div class="col-md-3 col-xs-6 col-lg-6">
+		<img src="test2.jpg" class="crop" id="img2">
+	</div>
+	<div class="col-md-3 col-xs-6 col-lg-6">
+		<img src="test3.jpg" class="crop" id="img3">
+	</div>
+	<div class="col-md-3 col-xs-6 col-lg-6">
+		<img src="test4.jpg" class="crop" id="img4">
+	</div>
+</div><!--/ row-->
+<div class="row">
+	<div class="col-md-1">
+		<button id="backward">&lt;</button>
+	</div>
+	<div class="col-md-10">
+		<img src="test1.jpg" class="huge" id="hugeImage">
+</div>
+<div class="col-md-1">
+		<button id="forward">&gt;</button>
+		</div>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+    $("button").click(function(){
+    $(this).fadeTo(500, 0);
+    });
+    
+    var paused = false;
+	$(".crop").click(function(){
+		$("#hugeImage").attr('src', 
+			$(this).attr('src'));
+	});
+
+	var counter2 = 1;
+	$("#img"+counter2).click();
+	$("#backward").click(function (){
+		counter2 = counter2 - 1;
+		if(counter2 < 1){
+			counter2 = 4;
+		}
+	$("#img"+counter2).click();
+});
+	$("#forward").click(function (){
+		counter2 = counter2 + 1;
+		if(counter2 > 4){
+			counter2 = 1;
+		}
+		$("#img"+counter2).click();
+	});
+	$("#hugeImage").click(function (){
+		paused = !paused;
+	});
+
+	setInterval(function (){
+		if(!paused){
+			$("#forward").click();
+		};
+	}, 2200);
+
+	var counter = 0;
+		$("#number").text(counter);
+		function count() {
+		counter = counter + 1;
+		if (counter > 5) {
+		$("#small_hello2").html("Enough!");
+	}
+		$("#number").text(counter);
+}
+	function sayHello(){
+		$("#small_hello").html("Good Bye Cruel World!");
+		$("#small_hello").click(function () {
+			$("#small_hello").html("Hello World");
+			$("#small_hello").off("click");
+		});
+	};
+		function sayHello2(){
+		$("#small_hello2").html("How's it going?");
+		$("#small_hello2").click(function () {
+			$("#small_hello2").html("Hello World");
+			$("#small_hello2").off("click");
+		});
+	};
+        $('#namebox').keypress(function (e) {
+          if (e.which == 13) {
+          var search_text = $('#namebox').val();
+          alert("Welcome " + search_text + ". This is a website that I made in July 2018.")
+              };
+        });
+        });
+	</script>
+<body>
+</html>
