@@ -1,0 +1,30 @@
+{
+  "name": "sampo",
+  "version": "1.0.0",
+  "description": "My First Site",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sampokuokkanen/test-site.git"
+  },
+  "keywords": [
+    "sampo",
+    "kuokkanen",
+    "html",
+    "css"
+  ],
+  "author": "Sampo Kuokkanen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sampokuokkanen/test-site/issues"
+  },
+  "homepage": "https://github.com/sampokuokkanen/test-site#readme",
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  }
+}
