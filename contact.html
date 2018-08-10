@@ -3,13 +3,14 @@
 <head>
 <meta charset ="UTF-8">
 <title>My First Page Ever</title>
-	      <link href="css/bootstrap.css" rel="stylesheet">
-	          <link href="css/styles.css" rel="stylesheet">
-	  		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-</head>
+<link rel="stylesheet" href="css/intlTelInput.css">
+
+	    <link href="css/bootstrap.css" rel="stylesheet">
+		  <link href="css/styles.css" rel="stylesheet">
+	</head>
 
 <body>
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-dark bg-primary navbar-fixed-top">
     <div class="container-fluid">
     <div class="navbar-header">
     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navbar" aria-expanded="false">Open!
@@ -40,9 +41,53 @@
 		<li><a href="contact.html">Contact</a>
 		</li>
 		</ol>
-		<p>Click <a href="mailto:finnishinjapan@yahoo.co.jp">here</a> to contact me. 
-		</p>
+
+		<!-- contact me form -->
+		<form>
+			<div class="form-group row">
+				<label for="firstname" class="col-md-2 col-form-label">First Name</label>
+				<div class="col-12 col-md-8">
+					<input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="lastname" class="col-md-2 col-form-label">Last Name</label>
+				<div class="col-md-8">
+					<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="telnum" class="col-12 col-md-2 col-form-label">Contact Tel.</label>
+				<div class="col-12 col-md-8 intl-tel-input">
+					<input type="tel" class="form-control" id="countrycode" name="countrycode" placeholder="Tel. number">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="emailid" class="col-md-2 col-form-label">Email</label>
+				<div class="col-12 col-md-8 ">
+					<input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
+				<div class="col-12 col-md-8">
+					<textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
+				</div>
+			</div>
+			<div class="form-group row">
+				<div class="offset-md-5 col-md-7">
+					<button type="submit" id="submitbutton" class="btn full-width btn-primary btn-lg">SUBMIT!</button>
+				</div>
+			</div>
+		</form>
+		<!-- /contact me form -->
+
 	</div>
-    <script src="js/bootstrap.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="js/intlTelInput.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+			$("#countrycode").intlTelInput();
+	</script>
 <body>
 </html>

@@ -1,0 +1,226 @@
+<?php
+/*
+Theme Name: Sampo's Theme
+Theme URI:
+Description: A theme made with Bootstrap 4
+Version: 1.0
+Author: Sampo Kuokkanen
+Author URI: www.sampo.xyz
+*/
+?>
+
+body{
+    margin:0;
+font-family: -apple-system, BlinkMacSystemFont,
+    “Segoe UI”, “Roboto”, “Oxygen”, “Ubuntu”, “Cantarell”,
+    “Fira Sans”, “Droid Sans”, “Helvetica Neue”,
+    sans-serif;
+}
+.navbar {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.navbar-dark .navbar-brand {
+    color: aliceblue;
+}
+.nav.navbar-nav li a {
+    color: white;
+}
+.navbar-nav > .active{
+    background: skyblue;
+}
+.ConA{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:0;
+    height:95vh;
+    min-height: 450px;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/pic.jpg");
+    background-position:center;
+    background-size: cover;
+    text-align: center;
+    color:white;
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3s; /* Firefox < 16 */
+    -ms-animation: fadein 3; /* Internet Explorer */
+    -o-animation: fadein 3s; /* Opera < 12.1 */
+    animation: fadein 3s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+}
+.ConA img{
+    width: 12%;
+}
+#logo-svg{
+    margin-right:0.8rem;
+    width: 46%;
+}
+#logo{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 15vw;
+    letter-spacing: 0.4rem;
+    margin-left: 0.25rem;
+    word-wrap: break-word;
+}
+.blinker_me {
+    color:aliceblue;
+	
+	animation-name: flash;
+	animation-duration: 10;
+	animation-timing-function: linear;
+	animation-iteration-count: 5;
+
+	//Firefox 1+
+	-webkit-animation-name: flash;
+	-webkit-animation-duration: 10s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+
+	//Safari 3-4
+	-moz-animation-name: flash;
+	-moz-animation-duration: 10;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+}
+
+@keyframes flash {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+}
+.ConA p{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+@media (min-width: 768px){
+    #logo-svg{
+        width: 23%;
+    }
+    #logo{
+        font-size: 125px;
+    }
+    .ConA p{
+        font-size: 24px;
+    }
+}
+.clicky{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border: solid 3px white;
+    border-radius: 10px;
+    background-color: #1E5F9E;
+    color:white;
+    font-size: 14px;
+    text-decoration: none;
+}
+#clickyclick a:hover{
+    background-image: linear-gradient(
+    rgba(255,255,255,0.5)
+    rgba(255,255,255,0.5)
+    );
+}
+.ConB{
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+.ConB .text{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+.ConB h2{
+    margin-top:0px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.ConB p{
+    margin-top:0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.8;
+    opacity: 0.8;
+}
+.ConB a{
+    color:#5D9AB2;
+    text-decoration: none
+}
+.ConB i{
+    display:inline-block;
+    margin-bottom: 20px;
+    font-size: 40px;
+    width: 2em;
+    line-height: 2em;
+    border-radius: 50%;
+    text-align: center;
+    background-color:#000;
+    color:#fff;
+}
+@media (min-width: 768px){
+    .ConB .container{
+        display: flex;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ConB .text{
+        flex:1;
+    }
+}
+.ConB a:hover{
+    text-decoration: underline;
+}
+.huge{
+	max-width: 100%;
+	margin-top: 10px;
+}
+.crop{
+	max-height: 150px;
+	max-width: 100%;
+	margin-bottom: 10px;
+}
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.display-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+ul.square{
+    list-style-type: upper-roman;
+}

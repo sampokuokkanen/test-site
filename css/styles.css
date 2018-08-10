@@ -14,6 +14,19 @@ font-family: -apple-system, BlinkMacSystemFont,
 }
 .navbar {
     margin-bottom: 0;
+    padding-bottom: 0;
+}
+.navbar-dark .navbar-brand {
+    color: aliceblue;
+}
+.nav.navbar-nav li a {
+    color: white;
+}
+.navbar-nav > .active{
+    background: skyblue;
+}
+.text:hover {
+    transform: scale(1.1);
 }
 .ConA{
     display: flex;
@@ -83,7 +96,7 @@ font-family: -apple-system, BlinkMacSystemFont,
     color:aliceblue;
 	
 	animation-name: flash;
-	animation-duration: 10;
+	animation-duration: 1;
 	animation-timing-function: linear;
 	animation-iteration-count: 5;
 
@@ -133,11 +146,18 @@ font-family: -apple-system, BlinkMacSystemFont,
     font-size: 14px;
     text-decoration: none;
 }
-#clickyclick a:hover{
-    background-image: linear-gradient(
-    rgba(255,255,255,0.5)
-    rgba(255,255,255,0.5)
-    );
+.clicky:hover {
+    animation-name: background-color;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+  }
+  @keyframes background-color {
+    100% {
+      background-color: #4791d0;
+    }
+  }
+.clicky a:hover {
+    color: aliceblue;
 }
 .ConB{
     padding-top: 80px;
@@ -211,3 +231,27 @@ font-family: -apple-system, BlinkMacSystemFont,
 ul.square{
     list-style-type: upper-roman;
 }
+.form-group .form-control, .full-width { 
+    width: 100%; 
+}
+footer {
+    background-color: #1E5F9E;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+    }
+}
+@media(max-width: 768px) {
+.intl-tel-input {width: 100%;}
+}
+
+@media(max-width: 768px) {
+    button.full-width {
+        width: 100%;  
+    }}
+footer h5{
+        padding-left: 10px;
+        border-left: 3px solid #eeeeee;
+        padding-bottom: 6px;
+        margin-bottom: 20px;
+        color:#ffffff;
+    }
